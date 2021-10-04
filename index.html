@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            THE FAMILY BOOK
+        </title>
+    </head>
+    <body>
+        <center style="margin-top: 40px;">
+            <h1>
+                My Family Book
+            </h1>
+
+            <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" style="width: 30%;" id="family_member_image">
+            <h4 id="family_member_name"></h4>
+            <button onclick="update();">Next</button>
+        </center>
+        <script>
+                      var images = ["https://i.postimg.cc/MKdhy06Z/family.jpg",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHJ8IxUewYCFe9VJOS3YpuvtsyMMlHjF8I_Q&usqp=CAU",
+                "Father.jpg",
+            "Mother.jpg",
+        "Boy.jpg",
+    "Me.jpg"];
+
+            var names =
+             ["Start",
+    "Radha Ravunni - GrandMother",
+    "Sudheer Gopalan - Father",
+    "Sindhu Sudheer - Mother",
+    "Aaryan Sudheer - Brother",
+    "Shreya Sudheer - Me"];
+            var i = 0;
+            function update()
+            {
+                i++;
+                var numbers_of_family_member_in_array = 6
+                if(i > numbers_of_family_member_in_array )
+                {
+                    i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName  = names[i];
+                document.getElementById("family_member_image").src = updatedImage;
+                document.getElementById("family_member_name").innerHTML = updatedName;
+            }
+        </script>
+    </body>
+</html>
